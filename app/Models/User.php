@@ -1,22 +1,22 @@
 <?php
-
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
     use Notifiable;
-
+    $this->command->info('Running Eloquent App\Models\User');
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','password_hint','first_name','last_name',
+        'name', 'email','first_name','last_name','password','password_hint' 
     ];
 
     /**
